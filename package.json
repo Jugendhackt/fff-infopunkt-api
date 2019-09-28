@@ -5,6 +5,7 @@
   "author": "MagicMarvMan <marvin.kai@gmx.de>",
   "license": "MIT",
   "dependencies": {
+    "await-to-js": "^2.1.1",
     "dynamoose": "^1.11.1"
   }
 }

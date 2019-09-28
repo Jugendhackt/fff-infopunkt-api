@@ -6,6 +6,9 @@ dynamoose.AWS.config.update({
     secretAccessKey: process.env.AWS_SECRET,
     region: process.env.AWS_REGION,
 })
+if(process.env.DB_LOCAL) {
+    dynamoose.local(process.env.DB_ADDRESS)
+}
 
 const Strikes = require("./models/Strike")
 
