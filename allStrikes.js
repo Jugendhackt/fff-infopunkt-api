@@ -30,6 +30,9 @@ module.exports.allStrikes = async event => {
         // return 500 if database query failed
         return {
             statusCode: 500,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+            },
             body: JSON.stringify(
                 {
                     code: "ERR_DATABASE",
@@ -43,6 +46,9 @@ module.exports.allStrikes = async event => {
     // return all elements with success code (200)
     return {
         statusCode: 200,
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+        },
         body: JSON.stringify(
             {
                 code: "SUCCESS",

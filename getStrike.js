@@ -36,6 +36,9 @@ module.exports.getStrike = async event => {
                 // return internal server error
                 return {
                     statusCode: 500,
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                    },
                     body: JSON.stringify(
                         {
                             code: "ERR_DATABASE",
@@ -50,6 +53,9 @@ module.exports.getStrike = async event => {
             items.message = ""
             return {
                 statusCode: 200,
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                },
                 body: JSON.stringify(
                     items
                 )
@@ -59,6 +65,9 @@ module.exports.getStrike = async event => {
             // return 400 malformed requests
             return {
                 statusCode: 400,
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                },
                 body: JSON.stringify(
                     {
                         code: "ERR_NOQUERY",
@@ -72,6 +81,9 @@ module.exports.getStrike = async event => {
         // return 400 malformed requests
         return {
             statusCode: 400,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+            },
             body: JSON.stringify(
                 {
                     code: "ERR_NOQUERY",
