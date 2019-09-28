@@ -15,6 +15,7 @@ service: fff-api
 #app: your-app-name
 #tenant: your-tenant-name
 
+# add dotenv plugin to get environment variables from .env file
 plugins:
   - serverless-dotenv-plugin
 
