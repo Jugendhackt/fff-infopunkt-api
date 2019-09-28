@@ -5,11 +5,17 @@ module.exports = dynamoose.model("FFF-Strikes", new dynamoose.Schema({
         hashKey: true,
         type: Number,
     },
-    datetime: {
+    date: {
         //rangeKey: true,
         type: String,
     },
     title: {
+        type: String,
+    },
+    startTime: {
+        type: String,
+    },
+    organisation: {
         type: String,
     },
     searchTitle: {
@@ -37,6 +43,9 @@ module.exports = dynamoose.model("FFF-Strikes", new dynamoose.Schema({
         type: String
     },
     routeLength: {
+        type: String,
+    },
+    groupSource: {
         type: String,
     },
 }, {
