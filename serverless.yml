@@ -23,6 +23,7 @@ provider:
   name: aws
   runtime: nodejs10.x
   region: eu-central-1
+  profile: ${env:AWS_PROFILE}
 
 # you can overwrite defaults here
 #  stage: dev
