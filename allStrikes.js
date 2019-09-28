@@ -7,7 +7,7 @@ dynamoose.AWS.config.update({
     secretAccessKey: process.env.AWS_SECRET,
     region: process.env.AWS_REGION,
 })
-if(process.env.DB_LOCAL) {
+if(process.env.DB_LOCAL == "true") {
     console.log("Using local database with address \"" + process.env.DB_ADDRESS + "\"")
     dynamoose.local(process.env.DB_ADDRESS)
 } else console.log("Using cloud database")
