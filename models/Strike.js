@@ -12,6 +12,9 @@ module.exports = dynamoose.model("FFF-Strikes", new dynamoose.Schema({
     title: {
         type: String,
     },
+    searchTitle: {
+        type: String,
+    },
     latitude: {
         type: Number,
     },
