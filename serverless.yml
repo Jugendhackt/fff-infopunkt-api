@@ -69,9 +69,9 @@ functions:
           path: hello
           method: get
     environment:
-      AWS_ACCESS_KEY_ID: ${env:AWS_ACCESS_KEY_ID}
+      AWS_KEY_ID: ${env:AWS_KEY_ID}
       AWS_SECRET: ${env:AWS_SECRET}
-      AWS_REGION: eu-central-1
+      AWS_LOCATION: eu-central-1
   getAllStrikes:
     handler: allStrikes.allStrikes
     events:
@@ -79,9 +79,9 @@ functions:
           path: getAllStrikes
           method: get
     environment:
-      AWS_ACCESS_KEY_ID: ${env:AWS_ACCESS_KEY_ID}
+      AWS_KEY_ID: ${env:AWS_KEY_ID}
       AWS_SECRET: ${env:AWS_SECRET}
-      AWS_REGION: eu-central-1
+      AWS_LOCATION: eu-central-1
       DB_LOCAL: ${env:DB_LOCAL}
       DB_ADDRESS: ${env:DB_ADDRESS}
 #    The following are a few example events you can configure

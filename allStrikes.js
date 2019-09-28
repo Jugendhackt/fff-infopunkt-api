@@ -3,9 +3,9 @@ const to = require('await-to-js').default
 
 const dynamoose = require("dynamoose")
 dynamoose.AWS.config.update({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    accessKeyId: process.env.AWS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET,
-    region: process.env.AWS_REGION,
+    region: process.env.AWS_LOCATION,
 })
 if(process.env.DB_LOCAL == "true") {
     console.log("Using local database with address \"" + process.env.DB_ADDRESS + "\"")
