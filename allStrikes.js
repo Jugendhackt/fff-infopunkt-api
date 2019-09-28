@@ -1,3 +1,6 @@
+
+const to = require('await-to-js').default
+
 const dynamoose = require("dynamoose")
 dynamoose.AWS.config.update({
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
