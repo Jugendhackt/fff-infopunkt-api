@@ -40,5 +40,6 @@ module.exports = dynamoose.model("FFF-Strikes", new dynamoose.Schema({
         type: String,
     },
 }, {
+    // use on demand throughput to support huge data added in short intervals
     throughput: "ON_DEMAND"
 }))
