@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "main": "handler.js",
   "author": "MagicMarvMan <marvin.kai@gmx.de>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dynamoose": "^1.11.1"
+  }
 }
