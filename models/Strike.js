@@ -2,9 +2,10 @@ const dynamoose = require("dynamoose")
 
 module.exports = dynamoose.model("FFF-Strikes", new dynamoose.Schema({
     strikeId: {
+        hashKey: true,
         type: Number,
     },
-    date: {
+    datetime: {
         type: String,
     },
     title: {
@@ -19,10 +20,16 @@ module.exports = dynamoose.model("FFF-Strikes", new dynamoose.Schema({
     url: {
         type: String,
     },
-    start: {
-        type: Number,
-    },
     source: {
         type: String,
+    },
+    description: {
+        type: String,
+    },
+    meetingPoint: {
+        type: String,
+    },
+    endPoint: {
+        type: String
     }
 }))
