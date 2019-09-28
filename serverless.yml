@@ -86,6 +86,19 @@ functions:
       AWS_LOCATION: eu-central-1
       DB_LOCAL: ${env:DB_LOCAL}
       DB_ADDRESS: ${env:DB_ADDRESS}
+  getAllStrikeIds:
+    handler: getAllIds.getAllIds
+    events:
+      - http:
+          path: strikes/all/id
+          method: get
+          cors: true
+    environment:
+      AWS_KEY_ID: ${env:AWS_KEY_ID}
+      AWS_SECRET: ${env:AWS_SECRET}
+      AWS_LOCATION: eu-central-1
+      DB_LOCAL: ${env:DB_LOCAL}
+      DB_ADDRESS: ${env:DB_ADDRESS}
   searchByTitle:
     handler: searchByTitle.searchByTitle
     events:
