@@ -76,7 +76,7 @@ functions:
     handler: allStrikes.allStrikes
     events:
       - http:
-          path: getAllStrikes
+          path: strikes/all
           method: get
     environment:
       AWS_KEY_ID: ${env:AWS_KEY_ID}
