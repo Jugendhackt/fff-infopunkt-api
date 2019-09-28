@@ -36,4 +36,6 @@ module.exports = dynamoose.model("FFF-Strikes", new dynamoose.Schema({
     routeLength: {
         type: String,
     },
+}, {
+    throughput: "ON_DEMAND"
 }))
