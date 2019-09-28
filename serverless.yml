@@ -79,6 +79,7 @@ functions:
       - http:
           path: strikes/all
           method: get
+          cors: true
     environment:
       AWS_KEY_ID: ${env:AWS_KEY_ID}
       AWS_SECRET: ${env:AWS_SECRET}
@@ -91,6 +92,7 @@ functions:
       - http:
           path: strikes/search/title
           method: get
+          cors: true
     environment:
       AWS_KEY_ID: ${env:AWS_KEY_ID}
       AWS_SECRET: ${env:AWS_SECRET}
@@ -103,6 +105,7 @@ functions:
       - http:
           path: strikes/get
           method: get
+          cors: true
     environment:
       AWS_KEY_ID: ${env:AWS_KEY_ID}
       AWS_SECRET: ${env:AWS_SECRET}
