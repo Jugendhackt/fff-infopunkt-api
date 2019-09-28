@@ -65,6 +65,10 @@ functions:
       - http:
           path: hello
           method: get
+    environment:
+      AWS_ACCESS_KEY_ID: ${env:AWS_ACCESS_KEY_ID}
+      AWS_SECRET: ${env:AWS_SECRET}
+      AWS_REGION: eu-central-1
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
