@@ -53,7 +53,7 @@ module.exports.allStrikes = async event => {
             {
                 code: "SUCCESS",
                 message: "",
-                items: items.reverse(),
+                items: items.sort(),
             }
         )
     }
