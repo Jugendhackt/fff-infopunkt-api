@@ -46,13 +46,12 @@ module.exports.getStrike = async event => {
             }
 
             // return elements with success code (200)
+            items.code = "SUCCESS"
+            items.message = ""
             return {
                 statusCode: 200,
                 body: JSON.stringify(
-                    {
-                        code: "SUCCESS",
-                        message: "",
-                    }.concat(items)
+                    items
                 )
             }
         } else {
