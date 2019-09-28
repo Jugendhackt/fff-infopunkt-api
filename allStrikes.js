@@ -14,7 +14,7 @@ if(process.env.DB_LOCAL) {
 const Strikes = require("./models/Strike")
 
 module.exports.allStrikes = async event => {
-    const [err, items] = await to(Schools.scan().exec())
+    const [err, items] = await to(Strikes.scan().exec())
     if(err) {
         return {
             statusCode: 500,
