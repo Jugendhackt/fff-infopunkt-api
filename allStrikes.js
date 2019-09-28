@@ -8,14 +8,18 @@ dynamoose.AWS.config.update({
     region: process.env.AWS_REGION,
 })
 if(process.env.DB_LOCAL) {
+    console.log("Using local database with address \"" + process.env.DB_ADDRESS + "\"")
     dynamoose.local(process.env.DB_ADDRESS)
-}
+} else console.log("Using cloud database")
 
 const Strikes = require("./models/Strike")
 
 module.exports.allStrikes = async event => {
+    console.log("Querying strikes...")
     const [err, items] = await to(Strikes.scan().exec())
+    console.log("Query successful.")
     if(err) {
+        console.log("Error.")
         return {
             statusCode: 500,
             body: JSON.stringify(
@@ -26,6 +30,7 @@ module.exports.allStrikes = async event => {
             )
         }
     }
+    console.log("Success.")
     return {
         statusCode: 200,
         body: JSON.stringify(
