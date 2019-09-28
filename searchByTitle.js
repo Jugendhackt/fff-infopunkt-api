@@ -18,7 +18,7 @@ module.exports.searchByTitle = async event => {
 
     if(event.queryStringParameters) {
         if(event.queryStringParameters["q"]) {
-            const [err, items] = await to(Strikes.scan("searchTitle").contains(event.queryStringParameters["q"]).exec())
+            const [err, items] = await to(Strikes.scan("searchTitle").contains(event.queryStringParameters["q"].toLowerCase()).exec())
             if(err) {
                 return {
                     statusCode: 500,
