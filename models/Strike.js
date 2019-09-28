@@ -31,5 +31,8 @@ module.exports = dynamoose.model("FFF-Strikes", new dynamoose.Schema({
     },
     endPoint: {
         type: String
-    }
+    },
+    routeLength: {
+        type: String,
+    },
 }))
