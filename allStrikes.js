@@ -7,6 +7,8 @@ dynamoose.AWS.config.update({
     region: process.env.AWS_REGION,
 })
 
+const Strikes = require("./models/Strike")
+
 module.exports.allStrikes = async event => {
 
   return {
