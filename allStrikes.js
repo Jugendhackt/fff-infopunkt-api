@@ -22,7 +22,7 @@ const Strikes = require("./models/Strike")
 module.exports.allStrikes = async event => {
     console.log("Querying strikes...")
     // query ALL elements in dynamodb
-    const [err, items] = await to(Strikes.query().ascending().exec())
+    const [err, items] = await to(Strikes.query("strikeId").ascending().exec())
     console.log("Query successful.")
     if(err) {
         console.log("Error.")
