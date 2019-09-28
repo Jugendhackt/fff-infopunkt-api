@@ -52,8 +52,7 @@ module.exports.getStrike = async event => {
                     {
                         code: "SUCCESS",
                         message: "",
-                        items,
-                    }
+                    }.concat(items)
                 )
             }
         } else {
