@@ -6,7 +6,7 @@ module.exports = dynamoose.model("FFF-Strikes", new dynamoose.Schema({
         type: Number,
     },
     datetime: {
-        rangeKey: true,
+        //rangeKey: true,
         type: String,
     },
     title: {
