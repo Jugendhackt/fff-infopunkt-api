@@ -84,6 +84,18 @@ functions:
       AWS_LOCATION: eu-central-1
       DB_LOCAL: ${env:DB_LOCAL}
       DB_ADDRESS: ${env:DB_ADDRESS}
+  searchByTitle:
+    handler: searchByTitle.searchByTitle
+    events:
+      - http:
+          path: strikes/search/title
+          method: get
+    environment:
+      AWS_KEY_ID: ${env:AWS_KEY_ID}
+      AWS_SECRET: ${env:AWS_SECRET}
+      AWS_LOCATION: eu-central-1
+      DB_LOCAL: ${env:DB_LOCAL}
+      DB_ADDRESS: ${env:DB_ADDRESS}
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
