@@ -53,7 +53,11 @@ module.exports.allStrikes = async event => {
             {
                 code: "SUCCESS",
                 message: "",
-                items: items.sort(),
+                items: items.sort(
+                    (a, b) => {
+                        return a.strikeId < b.strikeId
+                    }
+                ),
             }
         )
     }
